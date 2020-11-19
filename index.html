@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dropdown</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .menu {
+            height: 40px;
+            background-color: black;
+            color: white;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        li {
+            padding: 0px 20px;
+            float: left;
+            line-height: 40px;
+        }
+
+        .tituloMenu {
+            height: 40px;
+        }
+
+        .subMenu {
+            position: absolute;
+            width: 150px;
+            height: 120px;
+            background-color: black;
+            display: none;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <ul>
+            <li>
+                <div class="tituloMenu">HOME</div>
+                <div class="subMenu">
+                    OPCAO 1 <br>
+                    OPCAO 2 <br>
+                    OPCAO 3
+                </div>
+            </li>
+            <li>MENU 1</li>
+            <li>MENU 2</li>
+            <li>MENU 3</li>
+            <li>MENU 4</li>
+            <li>MENU 5</li>
+        </ul>
+    </div>
+
+
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        $(function(){
+
+            $('li').hover(function(){
+                $(this).find('.subMenu').slideDown();
+            }, function(){
+                $(this).find('.subMenu').slideUp();
+            });
+
+        });
+    </script>
+</body>
+
+</html>
